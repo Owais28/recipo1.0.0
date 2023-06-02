@@ -1,13 +1,11 @@
 import { Box, Skeleton, WrapItem, Text, Avatar } from "@chakra-ui/react";
 
-export const FeaturedCard = (props: { loading: any }) => {
+export const FeaturedCard = (props: { loading: boolean }) => {
   return (
     <Skeleton isLoaded={!props.loading} borderRadius={"xl"}>
       <Box
         overflow={"hidden"}
-        bgGradient={
-          "linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"
-        }
+        bgGradient={"linear(to-br, hsl(183.9,37.2%,59.41%), hsl(183.9,37.2%,30.41%))"}
         position={"relative"}
         //   p={4}
         borderRadius={"2xl"}
@@ -52,17 +50,8 @@ export const FeaturedCard = (props: { loading: any }) => {
             Asian white noodle with extra seafood
           </Text>
           <WrapItem alignItems={"center"}>
-            <Avatar
-              size={"xs"}
-              name="Dan Abrahmov"
-              mr={2}
-              src="https://bit.ly/dan-abramov"
-            />
-            <Text
-              fontSize={"14px"}
-              fontFamily={"Noto Sans"}
-              color={"whiteAlpha.800"}
-            >
+            <Avatar size={"xs"} name="Dan Abrahmov" mr={2} src="https://bit.ly/dan-abramov" />
+            <Text fontSize={"14px"} fontFamily={"Noto Sans"} color={"whiteAlpha.800"}>
               James Spader
             </Text>
           </WrapItem>

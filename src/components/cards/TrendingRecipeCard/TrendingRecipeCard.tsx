@@ -1,8 +1,8 @@
-import { Box, Button, Icon, Image, Skeleton, styled } from "@chakra-ui/react";
-import { PropsWithChildren, useEffect, useState } from "react";
+import { Box, Button, Icon, Skeleton, styled } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import TrendingRecipeTitle from "./TrendingRecipeTitle";
 import { BiBookmark } from "react-icons/bi";
-import { IconContext } from "react-icons";
+
 export type Props = {
   title: string;
   chef: {
@@ -43,6 +43,7 @@ const StyledSaveButton = () => {
       justifyContent={"center"}
       borderColor={"whiteAlpha.200"}
       borderWidth={1}
+      bgColor={"blackAlpha.200"}
     >
       {/* <Skeleton> */}
       <Button colorScheme="none">
@@ -55,7 +56,7 @@ const StyledSaveButton = () => {
   );
 };
 
-export default function TrendingRecipeCard(props: Props) {
+export default function TrendingRecipeCard() {
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -75,19 +76,19 @@ export default function TrendingRecipeCard(props: Props) {
       borderRadius={"lg"}
       // backdropFilter={"hue-rotate(30deg)"}
       bgColor={"blackAlpha.500"}
-      bgBlendMode={"multiply"}
+      // bgBlendMode={"multiply"}
       flexShrink={0}
     >
       {/* <Image src="https://images.unsplash.com/photo-1576094145185-26affdd581a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" /> */}
       <Skeleton isLoaded={isLoading} height={"full"}>
         <StyledSaveButton />
         <TrendingRecipeTitle
-          chef={{ name: "", verified: true }}
-          imgUrl=""
-          reviews={10}
-          reviewsOnScale={10}
-          timeRequired={10}
-          title=""
+        // chef={{ name: "", verified: true }}
+        // imgUrl=""
+        // reviews={10}
+        // reviewsOnScale={10}
+        // timeRequired={10}
+        // title=""
         />
       </Skeleton>
     </StyledCardContainer>

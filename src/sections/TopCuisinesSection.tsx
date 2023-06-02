@@ -65,23 +65,18 @@ export const TopCuisinesSection = () => {
         pl={3}
       >
         Top Cuisines{" "}
-        <Link
-          color="teal.500"
-          fontWeight={"normal"}
-          fontSize={"small"}
-          href="#"
-        >
+        <Link color="teal.500" fontWeight={"normal"} fontSize={"small"} href="#">
           See all
         </Link>
       </Text>
 
       <Box width="100%">
-        <Flexbox height={"auto"} >
+        <Flexbox height={"auto"}>
           {cuisineData.map((cuisine) => (
             <CuisineCard
               cuisineLink={cuisine.cuisineLink}
               cuisineTitle={cuisine.cuisineTitle}
-              imageUrl={cuisine.imageUrl}
+              imgUrl={cuisine.imageUrl}
             />
           ))}
         </Flexbox>

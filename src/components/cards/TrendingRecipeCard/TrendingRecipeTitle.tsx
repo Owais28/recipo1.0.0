@@ -1,8 +1,7 @@
-import { Props } from "./TrendingRecipeCard";
 import { Box, Divider, Text } from "@chakra-ui/react";
 
 // wrapper component
-export default function TrendingRecipeTitle({ ...props }: Props) {
+export default function TrendingRecipeTitle() {
   return (
     <Box
       bottom={0}
@@ -31,7 +30,7 @@ export default function TrendingRecipeTitle({ ...props }: Props) {
  * @param props
  * @returns
  */
-const TrendingRecipeTitleTop = (props: any) => {
+const TrendingRecipeTitleTop = () => {
   return (
     <>
       <Text fontSize={"large"} color={"#fff"} fontFamily={"sans-serif"} fontWeight={"bold"}>
@@ -49,7 +48,7 @@ const TrendingRecipeTitleTop = (props: any) => {
  * @param props
  * @returns
  */
-const TrendingRecipeTitleBottom = (props: any) => {
+const TrendingRecipeTitleBottom = () => {
   return <></>;
 };
 

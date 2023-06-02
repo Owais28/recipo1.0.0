@@ -1,13 +1,13 @@
-import {
-  Box,
-  Image,
-  SkeletonCircle,
-  SkeletonText,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Image, SkeletonCircle, SkeletonText, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
-export const CuisineCard = ({ imageUrl, cuisineTitle, cuisineLink }) => {
+type Props = {
+  imgUrl: string;
+  cuisineTitle: string;
+  cuisineLink: string;
+};
+
+export const CuisineCard = ({ imgUrl, cuisineTitle }: Props) => {
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => setLoading(false), 3000);
@@ -28,7 +28,7 @@ export const CuisineCard = ({ imageUrl, cuisineTitle, cuisineLink }) => {
       <Box width={"75px"} mx={"auto"} height={"75px"}>
         <SkeletonCircle width={"100%"} height={"100%"} isLoaded={!loading}>
           <Image
-            src={imageUrl}
+            src={imgUrl}
             objectFit={"cover"}
             height={"100%"}
             width={"100%"}
@@ -39,7 +39,7 @@ export const CuisineCard = ({ imageUrl, cuisineTitle, cuisineLink }) => {
         </SkeletonCircle>
       </Box>
       <SkeletonText noOfLines={2} isLoaded={!loading}>
-        <Text align={"center"} mx={'auto'} fontFamily={"Rubik"} fontSize={"smaller"} mt={2}>
+        <Text align={"center"} mx={"auto"} fontFamily={"Rubik"} fontSize={"smaller"} mt={2}>
           {cuisineTitle}
         </Text>
       </SkeletonText>

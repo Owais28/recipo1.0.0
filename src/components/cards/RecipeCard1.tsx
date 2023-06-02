@@ -1,14 +1,6 @@
-import {
-  Box,
-  Image,
-  Text,
-  VStack,
-  useDisclosure,
-  Skeleton,
-  SkeletonText,
-} from "@chakra-ui/react";
+import { Box, Image, Text, VStack, useDisclosure, Skeleton, SkeletonText } from "@chakra-ui/react";
 
-import { FC, ReactElement, useState } from "react";
+import { FC, useState } from "react";
 import { AiOutlineFire } from "react-icons/ai";
 import { IoIosNutrition } from "react-icons/io";
 import { RecipeInfo } from "../Drawer/RecipeInfo";
@@ -29,7 +21,7 @@ interface PopularRecipesCardInterface {
 export const RecipeCard1: FC<PopularRecipesCardInterface> = (
   props: PopularRecipesCardInterface
 ) => {
-  let { id, calories, carbs, fat, imgURL, protein, title } = props;
+  const { id, calories, carbs, fat, imgURL, protein, title } = props;
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [loading, setLoading] = useState(true);
@@ -51,7 +43,7 @@ export const RecipeCard1: FC<PopularRecipesCardInterface> = (
       border={"1px"}
       borderColor={"gray.200"}
     >
-      <VStack gap={2} height={'100%'} justify={"start"} alignItems={"start"}>
+      <VStack gap={2} height={"100%"} justify={"start"} alignItems={"start"}>
         <Skeleton borderRadius={"xl"} isLoaded={!loading}>
           <Image
             borderRadius={"xl"}

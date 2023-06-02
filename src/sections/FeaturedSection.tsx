@@ -17,7 +17,7 @@ export const Featured = () => {
       </Box>
       <Box width="100%">
         <Flexbox height={"230px"}>
-          {arrayPseudo.map((item, index) => (
+          {arrayPseudo.map((_item: unknown, index) => (
             <FeaturedCard loading={loading} key={index} />
           ))}
         </Flexbox>

@@ -1,8 +1,6 @@
 import {
   Box,
   Button,
-  ColorModeScript,
-  DarkMode,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -26,10 +24,10 @@ import { BsArrowRightShort } from "react-icons/bs";
 interface RecipeInfoInterface {
   isOpen: boolean;
   onClose: () => void;
-  id: Number;
+  id: number;
   title: string;
   imgURL: string;
-  calories: Number;
+  calories: number;
   protein: string;
   fat: string;
   carbs: string;
@@ -39,7 +37,6 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
   //   const [loading, setLoading] = useState(true);
 
   //   setTimeout(() => setLoading(false), 3000);
-
 
   return (
     <Drawer
@@ -66,12 +63,7 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
         </DrawerHeader>
         <DrawerBody>
           <Box gap={2} alignItems={"center"}>
-            <Box
-              alignItems={"center"}
-              w={"100%"}
-              display={"flex"}
-              justifyContent={"space-between"}
-            >
+            <Box alignItems={"center"} w={"100%"} display={"flex"} justifyContent={"space-between"}>
               <Box pr={3} py={"4"}>
                 <Text
                   fontSize={"large"}
@@ -224,7 +216,7 @@ export const RecipeInfo: FC<RecipeInfoInterface> = (props) => {
               mb={3}
             >
               Complete Recipe{" "}
-              <Box ml={1} >
+              <Box ml={1}>
                 <BsArrowRightShort fontSize={25} />
               </Box>
             </Button>

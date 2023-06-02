@@ -1,12 +1,11 @@
-import { Heading, HStack } from '@chakra-ui/react'
-import { Box } from '@chakra-ui/react'
-import React from 'react'
+import { Heading, HStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export const NotificationPage = () => {
-    document.title = "Recipo | Notifications"
+  document.title = "Recipo | Notifications";
   return (
     <Box
-    maxW={"md"}
+      maxW={"md"}
       minH={"100vh"}
       bg="gray.50"
       // bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
@@ -79,5 +78,5 @@ export const NotificationPage = () => {
         </TabPanels>
       </Tabs> */}
     </Box>
-  )
-}
+  );
+};

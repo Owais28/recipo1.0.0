@@ -15,7 +15,7 @@ import {
   PopoverHeader,
   PopoverBody,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const Navbar = ({ person = "Stranger" }) => {
   const [loading, setLoading] = useState(true);
@@ -28,12 +28,7 @@ export const Navbar = ({ person = "Stranger" }) => {
         <WrapItem flex={1}>
           <SkeletonText noOfLines={2} isLoaded={!loading}>
             <Grid gap={"0px"}>
-              <Text
-                fontFamily={"Rubik"}
-                fontSize={"larger"}
-                color={"#0C2628"}
-                fontWeight={"Bold"}
-              >
+              <Text fontFamily={"Rubik"} fontSize={"larger"} color={"#0C2628"} fontWeight={"Bold"}>
                 Hello {person}{" "}
                 <Image
                   display={"inline"}
@@ -61,20 +56,13 @@ export const Navbar = ({ person = "Stranger" }) => {
           {/* <SkeletonCircle isLoaded={!loading} /> */}
           <Popover isLazy={true}>
             <PopoverTrigger>
-              <Avatar
-                size={"md"}
-                name="Dan Abrahmov"
-                mr={2}
-                src="https://bit.ly/dan-abramov"
-              />
+              <Avatar size={"md"} name="Dan Abrahmov" mr={2} src="https://bit.ly/dan-abramov" />
             </PopoverTrigger>
-            <PopoverContent outline={'none'}>
+            <PopoverContent outline={"none"}>
               <PopoverArrow />
               <PopoverCloseButton />
               <PopoverHeader>Confirmation</PopoverHeader>
-              <PopoverBody>
-                Are you sure you want to have that milkshake?
-              </PopoverBody>
+              <PopoverBody>Are you sure you want to have that milkshake?</PopoverBody>
             </PopoverContent>
           </Popover>
           {/* <Avatar

@@ -1,29 +1,14 @@
-import {
-  Box,
-  Stack,
-  VStack,
-  Image,
-  Text,
-  Avatar,
-  WrapItem,
-  Link,
-  Skeleton,
-} from "@chakra-ui/react";
-import React, { FC, useState } from "react";
-import { BsArrowRightShort } from "react-icons/bs";
+import { Box, Stack, VStack, Image, Text, Avatar, WrapItem, Skeleton } from "@chakra-ui/react";
+import { FC, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
 interface RecipesCardInterface {
-  id: Number;
+  id: number;
   title: string;
   imgURL: string;
 }
 
-export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
-  id,
-  title,
-  imgURL,
-}) => {
+export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({ id, title, imgURL }) => {
   const [loading, setLoading] = useState(true);
 
   //
@@ -61,13 +46,7 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
               mr={2}
             />
             {/* </Skeleton> */}
-            <VStack
-              textAlign={"left"}
-              p={1}
-              align={"start"}
-              justify={"space-between"}
-              pr={2}
-            >
+            <VStack textAlign={"left"} p={1} align={"start"} justify={"space-between"} pr={2}>
               <Text
                 fontSize={"sm"}
                 fontWeight={"bold"}
@@ -79,17 +58,8 @@ export const RecipeCardHorizontal: FC<RecipesCardInterface> = ({
                 {title.length < 27 ? title : title.slice(0, 27) + "..."}
               </Text>
               <WrapItem alignItems={"center"}>
-                <Avatar
-                  size={"xs"}
-                  name="Dan Abrahmov"
-                  mr={2}
-                  src="https://bit.ly/dan-abramov"
-                />
-                <Text
-                  fontSize={"14px"}
-                  fontFamily={"Noto Sans"}
-                  color={"gray.400"}
-                >
+                <Avatar size={"xs"} name="Dan Abrahmov" mr={2} src="https://bit.ly/dan-abramov" />
+                <Text fontSize={"14px"} fontFamily={"Noto Sans"} color={"gray.400"}>
                   James Spader
                 </Text>
               </WrapItem>

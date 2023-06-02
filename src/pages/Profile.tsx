@@ -1,11 +1,10 @@
-import { Box, Heading, HStack } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Heading, HStack } from "@chakra-ui/react";
 
 export const Profile = () => {
-    document.title = "Recipo | Profile"
+  document.title = "Recipo | Profile";
   return (
     <Box
-    maxW={"md"}
+      maxW={"md"}
       minH={"100vh"}
       bg="#ffffff"
       // bgGradient={"linear(to-b,#fff,#fff,,#fff,green.50)"}
@@ -78,5 +77,5 @@ export const Profile = () => {
         </TabPanels>
       </Tabs> */}
     </Box>
-  )
-}
+  );
+};

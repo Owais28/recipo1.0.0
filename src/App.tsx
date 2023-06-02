@@ -1,22 +1,18 @@
-import { useState } from "react";
-import { MainMenu } from "./components/MainMenu";
 import { Route, Routes } from "react-router-dom";
 import { CompleteRecipe } from "./pages/CompleteRecipe";
 import { HomePage } from "./pages/HomePage";
 import "./index.css";
 import { Profile } from "./pages/Profile";
-import SearchPage from "./pages/SearchPage";
+// import SearchPage from "./pages/SearchPage";
 import { NotificationPage } from "./pages/NotificationPage";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
-function App(props: any) {
-  const [count, setCount] = useState(0);
-
+function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="search" element={<SearchPage store={props.store} />} />
+        {/* <Route path="search" element={<SearchPage store={store} />} /> */}
         <Route path="notification" element={<NotificationPage />} />
         <Route path="completeRecipe" element={<CompleteRecipe />} />
         <Route path="user" element={<Profile />} />
@@ -26,10 +22,11 @@ function App(props: any) {
   );
 }
 
-const mapStateToProps = (store: any) => {
-  return {
-    store: store,
-  };
-};
+// const mapStateToProps = (store: unknown) => {
+//   return {
+//     store: store,
+//   };
+// };
 
-export default connect(mapStateToProps)(App);
+// const App = connect(mapStateToProps)(A);
+export default App;

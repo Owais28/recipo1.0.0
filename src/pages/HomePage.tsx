@@ -30,15 +30,15 @@ export const HomePage = () => {
       {/* <MoreRecipes /> */}
       {/* <SpaceComponent /> */}
       <Flexbox height={"max-content"}>
-        {[...new Array(50)].map((item, key) => (
+        {[...new Array(50)].map(() => (
           <TrendingRecipeCard
-            key={key}
-            chef={{ name: "Owais Athar", verified: true }}
-            imgUrl="sffds"
-            reviews={10}
-            reviewsOnScale={4.5}
-            title="Make dssd ds"
-            timeRequired={100}
+          // key={key}
+          // chef={{ name: "Owais Athar", verified: true }}
+          // imgUrl="sffds"
+          // reviews={10}
+          // reviewsOnScale={4.5}
+          // title="Make dssd ds"
+          // timeRequired={100}
           />
         ))}
       </Flexbox>
