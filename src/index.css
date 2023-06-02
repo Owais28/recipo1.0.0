@@ -16,6 +16,15 @@
   margin-top: 2px;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  width: 0;
+  height: 0;
+}
+
 /* font-family: 'Noto Sans', sans-serif; */
 /* font-family: 'Playfair Display', serif; */
 /* body {
