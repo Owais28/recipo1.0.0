@@ -21,7 +21,7 @@ function App(props: any) {
         <Route path="completeRecipe" element={<CompleteRecipe />} />
         <Route path="user" element={<Profile />} />
       </Routes>
-      <MainMenu />
+      {/* <MainMenu /> */}
     </>
   );
 }

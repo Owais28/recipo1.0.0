@@ -1,6 +1,11 @@
 import { Flex } from "@chakra-ui/react";
+import { PropsWithChildren } from "react";
 
-export const Flexbox = ({ children, height, ...props }) => {
+type Props = {
+  height: number | string;
+};
+
+export const Flexbox = ({ children, height, ...props }: PropsWithChildren<Props>) => {
   return (
     <Flex
       py={2}
