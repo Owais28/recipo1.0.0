@@ -7,18 +7,20 @@ import { FiClock } from "react-icons/fi";
 export default function TrendingRecipeTitle() {
   return (
     <Box
-      bottom={0}
-      left={0}
-      marginTop={250}
+      bottom={3.5}
+      left={2}
+      right={2}
+      // marginTop={250}
       marginX={"auto"}
       bgColor={"blackAlpha.200"}
-      width={"99%"}
+      width={"90%"}
       padding={3}
       borderRadius={"md"}
       fontFamily={"sans-serif"}
       backdropFilter={"blur(10px) "}
       borderColor={"whiteAlpha.200"}
       borderWidth={1}
+      position={"absolute"}
     >
       <TrendingRecipeTitle.TopSection />
       <Divider mt={2} bgColor={"whiteAlpha.200"} mb={2} />
