@@ -3,9 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 .main__menu-link.active .chakra-button {
   border-top: 2px solid teal;
+}
+
+#root {
+  background-color: black;
 }
 
 .main__menu-link.active .chakra-text {

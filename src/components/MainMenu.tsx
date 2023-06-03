@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Text, VStack } from "@chakra-ui/react";
 import { HiHome } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
 import { BsPersonFill } from "react-icons/bs";
@@ -9,14 +9,16 @@ import { NavLink } from "react-router-dom";
 export const MainMenu = () => {
   return (
     <Box
-      position={"fixed"}
-      bottom={0}
+      // position={""}
+      top={"50vh"}
+      left={0}
       bg={"white"}
       boxShadow={"xs"}
       maxWidth={"md"}
-      width={"100vw"}
+      width={"max-content"}
+      zIndex={100}
     >
-      <HStack align={"center"} alignItems={"center"} justify={"center"} gap={0}>
+      <VStack align={"center"} alignItems={"center"} justify={"center"} gap={0}>
         <Box flex={1}>
           <NavLink className="main__menu-link" to={"/"}>
             <Button
@@ -33,12 +35,7 @@ export const MainMenu = () => {
             >
               <VStack spacing={0}>
                 <HiHome fontSize={20} />
-                <Text
-                  fontSize={11}
-                  fontFamily={"Rubik"}
-                  fontWeight="normal"
-                  color={"#0C2628"}
-                >
+                <Text fontSize={11} fontFamily={"Rubik"} fontWeight="normal" color={"#0C2628"}>
                   Home
                 </Text>
               </VStack>
@@ -114,7 +111,7 @@ export const MainMenu = () => {
             </Button>
           </NavLink>
         </Box>
-      </HStack>
+      </VStack>
     </Box>
   );
 };

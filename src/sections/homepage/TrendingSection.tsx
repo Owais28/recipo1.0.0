@@ -1,6 +1,6 @@
-import { Flexbox } from "../../components/wrapper/Flexbox";
+// import { Flexbox } from "../../components/wrapper/Flexbox";
 import TrendingRecipeCard from "../../components/cards/TrendingRecipeCard/TrendingRecipeCard";
-import { Box, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 
 // type Props = {};
 
@@ -13,16 +13,17 @@ export default function TrendingSection() {
         display={"flex"}
         alignItems={"center"}
         justifyContent={"space-between"}
+        w={"100%"}
       >
-        <Text fontWeight={600} fontSize={"medium"}>
-          Trending Section
+        <Text fontWeight={600} color={"white"} fontSize={"medium"}>
+          Trending Recipes
         </Text>
         <Link color={"teal.600"} fontSize={"small"}>
           See all
         </Link>
       </Box>
-      <Flexbox height={"max-content"}>
-        {[...new Array(50)].map((_item, key) => (
+      <Flex height={"max-content"} pl={3} pr={2} pt={2} pb={2} gap={3} overflow={"auto"}>
+        {[...new Array(20)].map((_item, key) => (
           <TrendingRecipeCard
             key={key}
             // chef={{ name: "Owais Athar", verified: true }}
@@ -33,7 +34,7 @@ export default function TrendingSection() {
             // timeRequired={100}
           />
         ))}
-      </Flexbox>
+      </Flex>
     </Box>
   );
 }
