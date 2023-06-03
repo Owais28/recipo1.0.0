@@ -9,9 +9,9 @@
   border-top: 2px solid teal;
 }
 
-#root {
+/* #root {
   background-color: black;
-}
+} */
 
 .main__menu-link.active .chakra-text {
   font-weight: 500;

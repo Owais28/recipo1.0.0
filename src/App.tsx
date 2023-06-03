@@ -17,11 +17,14 @@ const RootElement = () => {
       overflow={"hidden"}
       maxW={"100vw"}
       display={"grid"}
-      gridTemplateColumns={"max-content calc(100vw - 93.16px)"}
+      gridTemplateColumns={["1fr", "max-content calc(100vw - 93.16px)"]}
       // gap={10}
+      height={"100vh"}
     >
       <MainMenu />
-      <Outlet />
+      <Box height={"100%"} overflow={"scroll"}>
+        <Outlet />
+      </Box>
     </Box>
   );
 };

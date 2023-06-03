@@ -15,10 +15,16 @@ export const MainMenu = () => {
       bg={"white"}
       boxShadow={"xs"}
       maxWidth={"md"}
-      width={"max-content"}
+      // width={[0, "max-content"]}
       zIndex={100}
+      opacity={[0, 0, 1]}
+      overflow={"hidden"}
+      display={["none", "none", "block"]}
     >
       <VStack align={"center"} alignItems={"center"} justify={"center"} gap={0}>
+        <Text fontFamily={"Rubik"} fontSize={"xl"}>
+          Recipo
+        </Text>
         <Box flex={1}>
           <NavLink className="main__menu-link" to={"/"}>
             <Button

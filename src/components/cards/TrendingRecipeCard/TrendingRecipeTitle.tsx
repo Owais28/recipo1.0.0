@@ -1,4 +1,5 @@
 import { Box, Divider, Text } from "@chakra-ui/react";
+import { FC } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { BsGraphUp } from "react-icons/bs";
 import { FiClock } from "react-icons/fi";
@@ -12,7 +13,7 @@ export default function TrendingRecipeTitle() {
       right={2}
       // marginTop={250}
       marginX={"auto"}
-      bgColor={"blackAlpha.200"}
+      bgColor={"blackAlpha.300"}
       width={"90%"}
       padding={3}
       borderRadius={"md"}
@@ -22,7 +23,7 @@ export default function TrendingRecipeTitle() {
       borderWidth={1}
       position={"absolute"}
     >
-      <TrendingRecipeTitle.TopSection />
+      <TrendingRecipeTitle.TopSection title="lorem sdsd fsdfs df,snmdfsdf sfd fsd sdf " />
       <Divider mt={2} bgColor={"whiteAlpha.200"} mb={2} />
       {/* <TrendingRecipeTitle.TopSection /> */}
       <TrendingRecipeTitle.BottomSection />
@@ -30,19 +31,25 @@ export default function TrendingRecipeTitle() {
   );
 }
 
+type TitleTopProps = {
+  title: string;
+  author?: string;
+};
+
 /**
  * This component renders top section of TrendingRecipeTitle
- * @param props
+ * @param title title of the recipe
+ * @param author author of the recipe
  * @returns
  */
-const TrendingRecipeTitleTop = () => {
+const TrendingRecipeTitleTop: FC<TitleTopProps> = ({ title }) => {
   return (
     <>
-      <Text fontSize={"large"} color={"#fff"} fontFamily={"sans-serif"} fontWeight={"bold"}>
-        Make dsd
+      <Text fontSize={"small"} color={"#fff"} fontFamily={"sans-serif"} fontWeight={"bold"}>
+        {title?.length >= 20 ? title?.slice(0, 20) + "..." : title}
       </Text>
-      <Text fontSize={"smaller"} color={"whiteAlpha.700"}>
-        By sadsds{" "}
+      <Text fontSize={13} color={"whiteAlpha.700"}>
+        By Owais Athar{" "}
       </Text>
     </>
   );

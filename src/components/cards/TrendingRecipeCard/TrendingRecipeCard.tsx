@@ -1,4 +1,4 @@
-import { Box, Button, Icon, Skeleton, styled } from "@chakra-ui/react";
+import { Box, Button, Skeleton, styled } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import TrendingRecipeTitle from "./TrendingRecipeTitle";
 import { BiBookmark } from "react-icons/bi";
@@ -22,9 +22,9 @@ const StyledCardContainer = styled(Box, {
     backdropBlur: "1px",
     position: "relative",
     borderRadius: 10,
-    minHeight: 400,
+    minHeight: 350,
     overflow: "hidden",
-    width: "350px",
+    width: 300,
   },
 });
 
@@ -36,20 +36,20 @@ const StyledSaveButton = () => {
       top={3}
       right={3}
       borderRadius={"full"}
-      width={50}
-      height={50}
+      width={8}
+      height={8}
       display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
       borderColor={"whiteAlpha.200"}
       borderWidth={1}
-      bgColor={"blackAlpha.200"}
+      bgColor={"blackAlpha.300"}
     >
       {/* <Skeleton> */}
       <Button colorScheme="none">
-        <Icon>
-          <BiBookmark size={25} />
-        </Icon>
+        <Box>
+          <BiBookmark size={18} />
+        </Box>
       </Button>
       {/* </Skeleton> */}
     </Box>
